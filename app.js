@@ -1,4 +1,12 @@
-let API_KEY = '';
+// app.js 맨 위에 작성
+
+// 1. 여기에 TMDB API 키를 직접 넣어줍니다! (테스트용)
+const API_KEY = "00792821837676f54cf5cff2ad158a4d"; 
+
+
+// 2. 기존 loadApiKey() 함수가 있었다면 호출 부분 대신 바로 영화 목록을 부르도록 변경!
+fetchPopularMovies();
+
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 // DOM 요소 가져오기

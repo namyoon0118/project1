@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDB 영화 검색 & 찜 목록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 영화 검색 & 찜 목록</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="영화 제목을 입력하세요...">
+            <button id="search-btn">검색</button>
+        </div>
+        <div class="filter-buttons">
+            <button id="show-popular-btn" class="active">인기 영화</button>
+            <button id="show-wishlist-btn">❤️ 찜한 영화</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="movie-grid" class="movie-grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

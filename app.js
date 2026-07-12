@@ -21,17 +21,14 @@ async function loadApiKey() {
     }
 }
 
-// 2. 영화 목록 가져오기 함수 (예시)
+// 2. 영화 목록 가져오기 함수
 async function fetchPopularMovies() {
-    // TMDB API 주소에 발급받은 API_KEY를 넣어서 완성된 요청 주소를 만듭니다.
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR`;
     
     try {
-        // 서버에 데이터를 요청하고, 성공하면 JSON 형태로 변환합니다.
         const response = await fetch(url);
         const data = await response.json();
         
-        // 가져온 영화 목록 데이터(data.results)를 화면에 그리는 함수로 넘겨줍니다.
         displayMovies(data.results);
     } catch (error) {
         console.error("영화 데이터를 가져오는데 실패했습니다.", error);
